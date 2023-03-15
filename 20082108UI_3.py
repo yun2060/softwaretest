@@ -12,15 +12,23 @@ driver.find_element(By.ID, 'username').send_keys('byhy')
 driver.find_element(By.ID, 'password').send_keys('88888888')
 driver.find_element(By.CLASS_NAME, 'btn').click()
 sleep(1)
-list_input=['南京中医院','20082108','南京雨花台']
+list_input, list_output = ['南京中医院', '20082108', '南京雨花台'], []
 driver.find_element(By.CLASS_NAME, 'btn-outlined').click()
 table = driver.find_element(By.CLASS_NAME, 'col-md-8').find_elements(By.CLASS_NAME, 'form-control')
-for i in len(table):
+for i in range(len(table)):
     table[i].send_keys(list_input[i])
 driver.find_element(By.CLASS_NAME, 'col-md-12').find_elements(By.CLASS_NAME, 'btn-xs')[0].click()
+sleep(1)
 driver.find_element(By.CLASS_NAME, 'btn-group').find_element(By.CLASS_NAME, 'btn-xs').click()
 driver.find_element(By.CLASS_NAME, 'search-result-item').find_element(By.TAG_NAME, 'input').clear()
-list_input[0].replace('南京省中医院')
+list_input[0] = '南京省中医院'
 driver.find_element(By.CLASS_NAME, 'search-result-item').find_element(By.TAG_NAME, 'input').send_keys('南京省中医院')
 driver.find_element(By.CLASS_NAME, 'search-result-item-actionbar').find_element(By.CLASS_NAME, 'btn-xs').click()
-driver.find_element(By.CLASS_NAME, 'search-result-item-field').find_element(By.TAG_NAME,'span')
+result = driver.find_element(By.CLASS_NAME, 'search-result-item').find_elements(By.TAG_NAME, 'span')[1::2]
+for i in range(0, len(result)):
+    list_output.append(result[i].text)
+if list_input == list_output:
+    print("正确")
+else:
+    print("错误")
+driver.quit()
