@@ -2,7 +2,7 @@ from selenium import webdriver  # 导入selenium包
 from selenium.webdriver.common.by import By
 from time import sleep
 
-driver = webdriver.Chrome("J:\softwaretest\chromedriver.exe")  # 导入驱动
+driver = webdriver.Chrome("J:\\softwaretest\\chromedriver.exe")  # 导入驱动
 # 1.	在https://www.51job.com/网站中，点击搜索栏中的添加工作地点的元素，将会弹出选择地区的新界面，
 # 在此界面中，检查是否有已被选中的地区，如果有，依次进行删除操作，然后点击“上海”，确定选择。使用qiut()关闭浏览器。
 driver.get("https://www.51job.com/")

@@ -2,7 +2,7 @@ from selenium import webdriver  # 导入selenium包
 from selenium.webdriver.common.by import By
 from time import sleep
 
-driver = webdriver.Chrome("J:\softwaretest\chromedriver.exe")  # 导入驱动
+driver = webdriver.Chrome("J:\\softwaretest\\chromedriver.exe")  # 导入驱动
 sample, test = ['客户', '药品', '订单'], []
 driver.get("http://127.0.0.1:8047/mgr/sign.html")
 driver.find_element(By.ID, 'username').send_keys('byhy')

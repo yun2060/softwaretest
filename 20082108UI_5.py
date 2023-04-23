@@ -7,7 +7,7 @@ from selenium import webdriver  # 导入selenium包
 from selenium.webdriver.common.by import By
 from time import sleep
 
-driver = webdriver.Chrome("J:\softwaretest\chromedriver.exe")  # 导入驱动
+driver = webdriver.Chrome("J:\\softwaretest\\chromedriver.exe")  # 导入驱动
 driver.get("http://127.0.0.1:8047/mgr/sign.html")
 driver.find_element(By.CSS_SELECTOR, '#username').send_keys('byhy')
 driver.find_element(By.CSS_SELECTOR, '#password').send_keys('88888888')

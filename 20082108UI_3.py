@@ -6,7 +6,7 @@ from time import sleep
 # 点击添加客户，输入客户名为“南京中医院”的客户，填写客户基本信息；
 # 然后再点击编辑，修改客户名为：“南京省中医院”。
 # 预期结果为：成功登录后，检查客户列表第一项结果中客户名、电话、地址信息都是正确的（修改后的结果）。
-driver = webdriver.Chrome("J:\softwaretest\chromedriver.exe")  # 导入驱动
+driver = webdriver.Chrome("J:\\softwaretest\\chromedriver.exe")  # 导入驱动
 driver.get("http://127.0.0.1:8047/mgr/sign.html")
 driver.find_element(By.ID, 'username').send_keys('byhy')
 driver.find_element(By.ID, 'password').send_keys('88888888')

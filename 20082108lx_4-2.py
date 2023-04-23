@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 # 查看今天以及之后一周内的天气情况，输出当前城市一周内的最高气温和最低气温，输出格式为：
 # AAA（当前城市名称）一周内最高气温为XX摄氏度，最低气温为YY摄氏度。
 # 将python测试用例程序命名为：学号+lx_4-2.py
-driver = webdriver.Chrome("J:\softwaretest\chromedriver.exe")  # 导入驱动
+driver = webdriver.Chrome("J:\\softwaretest\\chromedriver.exe")  # 导入驱动
 driver.get("https://tianqi.2345.com/")
 city_n = driver.find_element(By.CSS_SELECTOR, '.banner .banner-city-change span').text
 tem = driver.find_elements(By.CSS_SELECTOR, '.banner-right-con-list-temp')

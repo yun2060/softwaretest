@@ -6,7 +6,7 @@ from selenium.webdriver.common.actions.action_builder import ActionBuilder
 # 2.	在浏览器中访问百度网站，将窗口最大化，鼠标悬停在顶部“设置”菜单项，暂停3秒，单击“关闭热搜”，查看界面状态变化；
 # 打开新网页“http://sahitest.com/demo/dragDropMooTools.htm” ，拖拽“drag me”方块到“Item 3”上，查看是否出现了“dropped”文本，
 # 出现则测试通过，否则失败。关闭浏览器。
-driver = webdriver.Chrome("J:\softwaretest\chromedriver.exe")
+driver = webdriver.Chrome("J:\\softwaretest\\chromedriver.exe")
 ac = ActionChains(driver)
 driver.get("https://www.baidu.com")
 driver.maximize_window()

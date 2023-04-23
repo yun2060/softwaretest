@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 # ①根据tag名选择此页中的输入框并输入“查看完毕！”，
 # ②根据id属性选择此页面底部的版权信息并输出，
 # ③选择此页中所有class属性值为plant的元素并依次输出。
-driver = webdriver.Chrome("J:\softwaretest\chromedriver.exe")  # 导入驱动
+driver = webdriver.Chrome("J:\\softwaretest\\chromedriver.exe")  # 导入驱动
 driver.get("https://cdn2.byhy.net/files/selenium/sample1.html")
 driver.find_element(By.CSS_SELECTOR, 'input').send_keys('查看完毕！')
 print(driver.find_element(By.CSS_SELECTOR, '#bottom'))

@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 # 1.	在浏览器中打开百度新闻https://news.baidu.com/网站，
 # 选择“热点要闻”栏目中的class名 为 focuslistnews 和 hotnews的元素，计算满足此条件的元素共有多少项，输出：“热点要闻栏目中有XX项焦点列表和热点新闻项”。
 # 使用qiut()关闭浏览器。
-driver = webdriver.Chrome("J:\softwaretest\chromedriver.exe")  # 导入驱动
+driver = webdriver.Chrome("J:\\softwaretest\\chromedriver.exe")  # 导入驱动
 driver.get("https://news.baidu.com/")
 news = driver.find_elements(By.CSS_SELECTOR, '#left-col-wrapper .hotnews,#left-col-wrapper .focuslistnews')
 print("热点要闻栏目中有{}项焦点列表和热点新闻项".format(len(news)))

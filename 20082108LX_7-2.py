@@ -5,7 +5,8 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
-driver = webdriver.Chrome("J:\softwaretest\chromedriver.exe")
+
+driver = webdriver.Chrome("J:\\softwaretest\\chromedriver.exe")
 driver.get("J:\softwaretest\selector.html")
 driver.find_element(By.CSS_SELECTOR, '#sexual input[value="男"]').click()
 driver.find_element(By.CSS_SELECTOR, '#hobby input[value="C"]').click()

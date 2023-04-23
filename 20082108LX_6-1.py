@@ -11,7 +11,7 @@ from selenium.webdriver.common.by import By
 # ③切换到新窗口并输出新窗口的标题栏文本，
 # ④返回原窗口，点击“功能按钮”，输出网页中新出现的“你点击了外部按钮”。
 # 关闭浏览器
-driver = webdriver.Chrome("J:\softwaretest\chromedriver.exe")  # 导入驱动
+driver = webdriver.Chrome("J:\\softwaretest\\chromedriver.exe")  # 导入驱动
 driver.get("https://cdn2.byhy.net/files/selenium/sample2.html")
 
 driver.switch_to.frame('frame1')

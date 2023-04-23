@@ -6,7 +6,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-driver = webdriver.Chrome("J:\softwaretest\chromedriver.exe")
+driver = webdriver.Chrome("J:\\softwaretest\\chromedriver.exe")
 driver.get("https://music.163.com/")
 driver.find_element(By.CSS_SELECTOR, "#g_nav2 > div > ul > li:nth-child(2) > a").click()
 driver.switch_to.frame('g_iframe')

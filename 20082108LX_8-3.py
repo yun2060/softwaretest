@@ -8,15 +8,18 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 from time import sleep
-driver = webdriver.Chrome("J:\softwaretest\chromedriver.exe")
+
+driver = webdriver.Chrome("J:\\softwaretest\\chromedriver.exe")
 ac = ActionChains(driver)
 driver.get("https://www.baidu.com")
 Input_b = driver.find_element(By.CSS_SELECTOR, 'span #kw')
-ac.key_down(Keys.SHIFT).send_keys_to_element(Input_b, 's').key_up(Keys.SHIFT).send_keys_to_element(Input_b, 'elenium!').perform()
+ac.key_down(Keys.SHIFT).send_keys_to_element(Input_b, 's').key_up(Keys.SHIFT).send_keys_to_element(Input_b,
+                                                                                                   'elenium!').perform()
 ac.key_down(Keys.CONTROL).send_keys('a').send_keys('c').perform()
 driver.get("https://www.sogou.com")
 Input_s = driver.find_element(By.CSS_SELECTOR, '.sec-input')
-ac.key_down(Keys.CONTROL).send_keys_to_element(Input_s, 'v').key_up(Keys.CONTROL).send_keys('!').pause(3).key_down(Keys.BACKSPACE).key_down(Keys.BACKSPACE).key_down(Keys.ENTER).perform()
+ac.key_down(Keys.CONTROL).send_keys_to_element(Input_s, 'v').key_up(Keys.CONTROL).send_keys('!').pause(3).key_down(
+    Keys.BACKSPACE).key_down(Keys.BACKSPACE).key_down(Keys.ENTER).perform()
 sleep(1)
 test_url = 'https://www.sogou.com/web?query=Selenium&'
 if driver.current_url[:41] == test_url:

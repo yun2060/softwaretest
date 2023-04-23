@@ -1,7 +1,7 @@
 from selenium import webdriver  # 导入selenium包
 
 
-driver = webdriver.Chrome("J:\softwaretest\chromedriver.exe")  # 导入驱动
+driver = webdriver.Chrome("J:\\softwaretest\\chromedriver.exe")  # 导入驱动
 
 driver.get("http://127.0.0.1:8047/mgr/sign.html")  # 打开网页
 # 实验一

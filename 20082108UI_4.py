@@ -7,7 +7,7 @@ from time import sleep
 # 然后再点击编辑，修改客户名为：“南京省中医院”。
 # 预期结果为：成功登录后，检查客户列表第一项结果中客户名、电话、地址信息都是正确的（修改后的结果）。
 # 将其中的选择元素语句都尽量使用CSS 选择器完成
-driver = webdriver.Chrome("J:\softwaretest\chromedriver.exe")  # 导入驱动
+driver = webdriver.Chrome("J:\\softwaretest\\chromedriver.exe")  # 导入驱动
 driver.get("http://127.0.0.1:8047/mgr/sign.html")
 driver.find_element(By.CSS_SELECTOR, '#username').send_keys('byhy')
 driver.find_element(By.CSS_SELECTOR, '#password').send_keys('88888888')
